@@ -115,8 +115,7 @@ export async function getAnalysis(analysisId?: string): Promise<{
       .limit(1);
   }
 
-const { data, error } = await (query as ReturnType<typeof query.single>).single();
-  if (error) return null;
+const { data, error } = await query.single();  if (error) return null;
   return data;
 }
 
