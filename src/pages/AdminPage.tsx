@@ -180,11 +180,9 @@ export default function AdminPage({ session }: Props) {
                       </span>
                     </td>
                     <td style={S.td}>{new Date(p.purchase_date).toLocaleDateString("fr-FR")}</td>
-                    <td style={S.td} style={{ fontFamily: "monospace", color: "#c9a96e", ...S.td }}>{p.access_key_prefix}…</td>
-                    <td style={S.td}>{p.used_at ? new Date(p.used_at).toLocaleDateString("fr-FR") : "—"}</td>
+<td style={{ ...S.td, fontFamily: "monospace", color: "#c9a96e" }}>{p.access_key_prefix}…</td>                    <td style={S.td}>{p.used_at ? new Date(p.used_at).toLocaleDateString("fr-FR") : "—"}</td>
                     <td style={S.td} style={{ fontSize: "11px", color: "#4a4560", ...S.td }}>{p.gumroad_sale_id}</td>
-                  </tr>
-                ))}
+<td style={{ ...S.td, fontSize: "11px", color: "#4a4560" }}>{p.gumroad_sale_id}</td>                ))}
               </tbody>
             </table>
           </div>
