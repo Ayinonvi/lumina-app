@@ -14,7 +14,7 @@ type Analysis = {
   created_at: string; ai_model: string | null; generation_time_ms: number | null; error_message: string | null;
 };
 
-export default function AdminPage({ session }: Props) {
+export default function AdminPage({ session: _session }: Props) {
   const [purchases, setPurchases] = useState<Purchase[]>([]);
   const [analyses, setAnalyses] = useState<Analysis[]>([]);
   const [loading, setLoading] = useState(true);
